@@ -38,26 +38,26 @@ class Navigation extends Component
         const { history } = this.props;
 
         return (
-            <Menu inverted pointing vertical>
+            <Menu inverted pointing vertical className="navigation-menu">
                 <Menu.Item
                     color="blue"
                     active={activeMenu === "home"}
                     onClick={() => { history.push("/") }}>
-                    <Icon name="home" />
+                    <Icon name="home" size="large" />
                     Home
                 </Menu.Item>
                 <Menu.Item
                     color="blue"
                     active={activeMenu === "projects"}
                     onClick={() => { history.push("/projects") }}>
-                    <Icon name="briefcase" />
+                    <Icon name="briefcase" size="large" />
                     Projects
                 </Menu.Item>
                 <Menu.Item
                     color="blue"
                     active={activeMenu === "contact"}
                     onClick={() => { history.push("/contact") }}>
-                    <Icon name="address card" />
+                    <Icon name="address card" size="large" />
                     Contact
                 </Menu.Item>
             </Menu>

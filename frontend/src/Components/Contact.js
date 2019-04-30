@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Message, Header, Form, Icon } from "semantic-ui-react";
+import { Message, Header, Form, Icon, Loader } from "semantic-ui-react";
 import axios from "axios";
 import sanitizeHtml from "sanitize-html";
 import { BACKEND, SEND_EMAIL } from "../Constants/Routes";
@@ -8,7 +8,8 @@ const INITIAL_STATE = {
     email: "",
     message: "",
     messageValid: true,
-    emailValid: true
+    emailValid: true,
+    sendPending: false
 }
 
 class Contact extends Component
@@ -37,6 +38,7 @@ class Contact extends Component
 
         if (emailValid && messageValid)
         {
+            this.setState({ sendPending: true });
             axios.post(`${BACKEND}${SEND_EMAIL}`, { email: email, message: sanitizedMessage })
                 .then((res) =>
                 {
@@ -56,33 +58,33 @@ class Contact extends Component
 
     render()
     {
-        const { email, message, emailValid, messageValid } = this.state;
+        const { email, message, emailValid, messageValid, sendPending } = this.state;
 
         return (
-                <Message color="black" style={{ textAlign: "left", width: "100%" }}>
-                    <Message.Header><Header as="h1" color="blue">Contact Me</Header></Message.Header>
-                    <Message.Content>
-                        {
-                            emailValid ? null :
-                                messageValid ?
-                                    <Message warning style={{ display: "flex", alignItems: "center" }}><Icon name="exclamation" />Please enter a valid email address</Message> :
-                                    <Message warning attached="top" style={{ display: "flex", alignItems: "center" }}><Icon name="exclamation" />Please enter a valid email address</Message>
-                        }
-                        {
-                            messageValid ? null :
-                                emailValid ?
-                                    <Message warning style={{ display: "flex", alignItems: "center" }}><Icon name="exclamation" />Please enter a message to send</Message> :
-                                    <Message warning attached="bottom" style={{ display: "flex", alignItems: "center" }}><Icon name="exclamation" />Please enter a message to send</Message>
-                        }
-                        <Form inverted onSubmit={this.onSubmit}>
-                            <Form.Group>
-                                <Form.Input label="Email" name="email" type="text" placeholder="email" value={email} error={!emailValid} onChange={this.onChange} />
-                            </Form.Group>
-                            <Form.TextArea label="Message" name="message" placeholder="message" value={message} error={!messageValid} onChange={this.onChange} />
-                            <Form.Button primary type="submit">Submit</Form.Button>
-                        </Form>
-                    </Message.Content>
-                </Message>
+            <Message color="black" style={{ textAlign: "left", width: "100%" }}>
+                <Message.Header><Header as="h1" color="blue">Contact Me</Header></Message.Header>
+                <Message.Content>
+                    {
+                        emailValid ? null :
+                            messageValid ?
+                                <Message warning style={{ display: "flex", alignItems: "center" }}><Icon name="exclamation" />Please enter a valid email address</Message> :
+                                <Message warning attached="top" style={{ display: "flex", alignItems: "center" }}><Icon name="exclamation" />Please enter a valid email address</Message>
+                    }
+                    {
+                        messageValid ? null :
+                            emailValid ?
+                                <Message warning style={{ display: "flex", alignItems: "center" }}><Icon name="exclamation" />Please enter a message to send</Message> :
+                                <Message warning attached="bottom" style={{ display: "flex", alignItems: "center" }}><Icon name="exclamation" />Please enter a message to send</Message>
+                    }
+                    <Form inverted onSubmit={this.onSubmit}>
+                        <Form.Group>
+                            <Form.Input label="Email" name="email" type="text" placeholder="email" value={email} error={!emailValid} onChange={this.onChange} />
+                        </Form.Group>
+                        <Form.TextArea label="Message" name="message" placeholder="message" value={message} error={!messageValid} onChange={this.onChange} />
+                        <Form.Button primary type="submit" disabled={sendPending}>Submit</Form.Button>
+                    </Form>
+                </Message.Content>
+            </Message>
         )
     }
 }

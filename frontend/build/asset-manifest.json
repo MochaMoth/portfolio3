@@ -1,20 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.8a362111.chunk.css",
-    "main.js": "/static/js/main.58237e8c.chunk.js",
-    "main.js.map": "/static/js/main.58237e8c.chunk.js.map",
+    "main.css": "/static/css/main.870cf418.chunk.css",
+    "main.js": "/static/js/main.3e5cb07a.chunk.js",
+    "main.js.map": "/static/js/main.3e5cb07a.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
     "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.e88e3947.chunk.js": "/static/js/2.e88e3947.chunk.js",
-    "static/js/2.e88e3947.chunk.js.map": "/static/js/2.e88e3947.chunk.js.map",
+    "static/js/2.70898cb8.chunk.js": "/static/js/2.70898cb8.chunk.js",
+    "static/js/2.70898cb8.chunk.js.map": "/static/js/2.70898cb8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f453ab6c7706d1fbcb837d71c4ef460b.js": "/precache-manifest.f453ab6c7706d1fbcb837d71c4ef460b.js",
+    "precache-manifest.36cd0c9f6c427bd6835c3f172c4290ce.js": "/precache-manifest.36cd0c9f6c427bd6835c3f172c4290ce.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.8a362111.chunk.css.map": "/static/css/main.8a362111.chunk.css.map",
+    "static/css/main.870cf418.chunk.css.map": "/static/css/main.870cf418.chunk.css.map",
+    "static/media/Book.png": "/static/media/Book.0b26841d.png",
     "static/media/Chest.png": "/static/media/Chest.803c5801.png",
+    "static/media/Electron.png": "/static/media/Electron.aec84c05.png",
+    "static/media/FedoraLight.png": "/static/media/FedoraLight.ebd67717.png",
     "static/media/Ireena.png": "/static/media/Ireena.f088fca3.png",
     "static/media/UnityLogo.svg": "/static/media/UnityLogo.33e524fa.svg",
+    "static/media/blender.png": "/static/media/blender.71974a03.png",
+    "static/media/fedora.png": "/static/media/fedora.52cd09e7.png",
     "static/media/firebase.svg": "/static/media/firebase.64f78189.svg",
-    "static/media/simplyRoleplay.png": "/static/media/simplyRoleplay.59296ba1.png"
+    "static/media/simplyRoleplay.png": "/static/media/simplyRoleplay.59296ba1.png",
+    "static/media/user-layout.png": "/static/media/user-layout.7ee2b16f.png"
   }
 }

@@ -13,16 +13,20 @@ class RoleplayWebsite extends Component
 
     render()
     {
-        const learnedSkills = ["Infinite Scroll", "Semantic UI", "No-SQL", "CRUD", "Modular Components", "Website Deployment"];
+        const learnedSkills = [
+            "Infinite Scroll", "Semantic UI", "No-SQL", "CRUD",
+            "Modular Components", "Website Deployment", "Cloudinary",
+            "The Color API", "Firebase APIs"
+        ];
 
         return (
-            <Message color="black">
+            <Message color="black" className="big-content">
                 <Message.Header style={{ textAlign: "center" }}>
                     <Header as="h1" color="blue">Simply Roleplay</Header>
                 </Message.Header>
-                <Message.Content className="scrolling">
+                <Message.Content>
                     <Segment inverted style={{ textAlign: "center", paddingBottom: "0" }}>
-                        <Button.Group>
+                        <Button.Group className="desktop-tech-stack">
                             <Button icon onClick={event => this.onClick("https://nodejs.org/en/")} primary><Icon name="node js" size="huge" /></Button>
                             <Button icon onClick={event => this.onClick("https://reactjs.org/")} primary><Icon name="react" size="huge" /></Button>
                             <Button icon onClick={event => this.onClick("https://www.mongodb.com/")} primary><Icon name="leaf" size="huge" /></Button>
@@ -30,11 +34,21 @@ class RoleplayWebsite extends Component
                             <Button icon onClick={event => this.onClick("https://firebase.google.com/")} primary><Image style={{ filter: "invert(100%)" }} className="techstack-logo" src={firebaseImage} /></Button>
                             <Button icon onClick={event => this.onClick("https://expressjs.com/")} primary><Image src={expressImage} /></Button>
                         </Button.Group>
+                        <Button.Group className="mobile-tech-stack">
+                            <Button icon onClick={event => this.onClick("https://nodejs.org/en/")} primary><Icon name="node js" size="huge" /></Button>
+                            <Button icon onClick={event => this.onClick("https://reactjs.org/")} primary><Icon name="react" size="huge" /></Button>
+                            <Button icon onClick={event => this.onClick("https://www.mongodb.com/")} primary><Icon name="leaf" size="huge" /></Button>
+                        </Button.Group>
+                        <Button.Group className="mobile-tech-stack">
+                            <Button icon onClick={event => this.onClick("https://git-scm.com/")} primary><Icon name="git square" size="huge" /></Button>
+                            <Button icon onClick={event => this.onClick("https://firebase.google.com/")} primary><Image style={{ filter: "invert(100%)" }} className="techstack-logo" src={firebaseImage} /></Button>
+                            <Button icon onClick={event => this.onClick("https://expressjs.com/")} primary><Image src={expressImage} /></Button>
+                        </Button.Group>
                     </Segment>
                     <Segment inverted style={{ textAlign: "center", paddingTop: "0" }}>
                         <Button.Group>
-                            <Button icon onClick={event => this.onClick("https://github.com/FedoraGameDev/roleplay")} primary><Icon name="github" size="huge" /></Button>
-                            <Button icon onClick={event => this.onClick("https://simply-roleplay.herokuapp.com")} primary><Icon name="at" size="huge" /></Button>
+                            <Button icon onClick={event => this.onClick("https://github.com/FedoraGameDev/roleplay")} primary>Github<br /><Icon name="github" size="huge" /></Button>
+                            <Button icon onClick={event => this.onClick("https://simply-roleplay.herokuapp.com")} primary>Website<br /><Icon name="at" size="huge" /></Button>
                         </Button.Group>
                     </Segment>
                     <Image src={simplyRoleplayImage} className="project-image" />
@@ -50,13 +64,14 @@ class RoleplayWebsite extends Component
                             Simply Roleplay is a full-stack website. It was build from the ground up using Express for routing, Mongo and Mongoose
                             as the database, Firebase for authentication, and React as a frontend. When the MVP was complete, the website was hosted on Heroku.
                             <br /><br />
-                            The stories page is build with an infinite-scroll component, so stories will only be loaded 10 at a time. Colors in character Description
-                            and on story covers are sent to thecolorapi.com to get the closest color name and contrasting color for fonts. This allows users to choose
-                            any color for that information without having a negative impact on the website visuals.
+                            The stories page is build with an infinite-scroll component, so stories will only be loaded 10 at a time. Colors in character descriptions
+                            and on story covers are sent to thecolorapi.com to get the closest color name and the contrasting font color. This allows users to choose
+                            any color for that information without having a negative impact on the website visuals. Images are cropped and rendered at a specific size
+                            on the front end before being sent to cloudinary.com for hosting, saving space in the database.
                         </Message.Content>
                     </Message>
                     <Message>
-                        <Message.Header><Header as="h3" style={{ textAlign: "center" }} color="blue">Knowledge Learned</Header></Message.Header>
+                        <Message.Header><Header as="h3" style={{ textAlign: "center" }} color="blue">Skills Used</Header></Message.Header>
                         <Message.Content>
                             <Card.Group>
                                 {

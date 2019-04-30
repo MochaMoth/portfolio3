@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { Menu, Icon } from "semantic-ui-react";
+import { Menu, Icon, Dropdown } from "semantic-ui-react";
 
 const INITIAL_STATE = {
     activeMenu: "home"
@@ -35,30 +35,40 @@ class Navigation extends Component
     render()
     {
         const { activeMenu } = this.state;
-        const { history } = this.props;
+        const { history, mobile } = this.props;
 
         return (
-            <Menu inverted pointing vertical className="navigation-menu">
+            <Menu inverted={!mobile} pointing={!mobile} vertical={!mobile} className="navigation-menu" icon={mobile}>
+                <Dropdown className="mobile-navigation-dropdown" icon="bars" item>
+                    <Dropdown.Menu>
+                        <Dropdown.Item onClick={() => { history.push("/") }}><Icon name="home" size="large" />Home</Dropdown.Item>
+                        <Dropdown.Item onClick={() => { history.push("/projects") }}><Icon name="briefcase" size="large" />Projects</Dropdown.Item>
+                        <Dropdown.Item onClick={() => { history.push("/contact") }}><Icon name="address card" size="large" />Contact</Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
                 <Menu.Item
+                    className="mobile-navigation-item"
                     color="blue"
                     active={activeMenu === "home"}
                     onClick={() => { history.push("/") }}>
                     <Icon name="home" size="large" />
-                    Home
+                    <span className="title-text">{!mobile ? "Home" : null}</span>
                 </Menu.Item>
                 <Menu.Item
+                    className="mobile-navigation-item"
                     color="blue"
                     active={activeMenu === "projects"}
                     onClick={() => { history.push("/projects") }}>
                     <Icon name="briefcase" size="large" />
-                    Projects
+                    <span className="title-text">{!mobile ? "Projects" : null}</span>
                 </Menu.Item>
                 <Menu.Item
+                    className="mobile-navigation-item"
                     color="blue"
                     active={activeMenu === "contact"}
                     onClick={() => { history.push("/contact") }}>
                     <Icon name="address card" size="large" />
-                    Contact
+                    <span className="title-text">{!mobile ? "Contact" : null}</span>
                 </Menu.Item>
             </Menu>
         )

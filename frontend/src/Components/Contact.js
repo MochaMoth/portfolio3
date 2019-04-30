@@ -59,8 +59,7 @@ class Contact extends Component
         const { email, message, emailValid, messageValid } = this.state;
 
         return (
-            <div style={{ textAlign: "center" }}>
-                <Message color="black" style={{ textAlign: "left" }}>
+                <Message color="black" style={{ textAlign: "left", width: "100%" }}>
                     <Message.Header><Header as="h1" color="blue">Contact Me</Header></Message.Header>
                     <Message.Content>
                         {
@@ -84,7 +83,6 @@ class Contact extends Component
                         </Form>
                     </Message.Content>
                 </Message>
-            </div>
         )
     }
 }

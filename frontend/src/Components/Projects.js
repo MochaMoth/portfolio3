@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import { Message, Card, Header, Image, Button, Icon } from "semantic-ui-react";
-import RoleplayWebsiteImage from "./Images/simplyRoleplay.png";
+import { Message, Card, Header, Image, Button, Icon, Segment } from "semantic-ui-react";
+import RoleplayWebsiteImage from "./Images/Book.png";
 import IreenaImage from "./Images/Ireena.png";
 import ChestImage from "./Images/Chest.png";
+import userLayoutImage from "./Images/UserLayout.png";
+import fedoraLogo from "./Images/fedora.png";
+import youtubeLogo from "./Images/youtube.png";
 
 class Projects extends Component
 {
@@ -21,14 +24,13 @@ class Projects extends Component
     render()
     {
         return (
-            <div style={{ textAlign: "center" }}>
-                <Message color="black">
-                    <Message.Header><Header as="h1" color="blue">Projects</Header></Message.Header>
+            <Message color="black" style={{ textAlign: "center" }} className="big-content">
+                <Message.Header><Header as="h1" color="blue">Projects</Header></Message.Header>
+                <Message.Content>
                     <Card.Group centered>
-                        <Card link onClick={() => this.onClickLink("/projects/roleplay-website")} className="project-card">
-                            <Image src={RoleplayWebsiteImage} className="mini-project-image" />
-                            <Card.Content>
-                                <Card.Header>Simply Roleplay</Card.Header>
+                        <Card link onClick={() => this.onClickLink("/projects/roleplay-website")} className="new-project-card">
+                            <Card.Header><Header as="h2">Simply Roleplay</Header></Card.Header>
+                            <Card.Content style={{ backgroundImage: `url(${RoleplayWebsiteImage})` }} className="new-project-card-content">
                                 <Button.Group>
                                     <Button icon primary onClick={event => this.onClickLinkTab(event, "https://github.com/FedoraGameDev/roleplay")}>
                                         <Icon size="large" name="github" />
@@ -37,14 +39,12 @@ class Projects extends Component
                                         <Icon site="large" name="at" />
                                     </Button>
                                 </Button.Group>
-                                <p style={{ color: "red" }}>Site may need to wake.</p>
                             </Card.Content>
                         </Card>
 
-                        <Card link onClick={() => this.onClickLink("/projects/user-layout")} className="project-card">
-                            <Image src={RoleplayWebsiteImage} className="mini-project-image" />
-                            <Card.Content>
-                                <Card.Header>User Layout</Card.Header>
+                        <Card link onClick={() => this.onClickLink("/projects/user-layout")} className="new-project-card">
+                            <Card.Header><Header as="h2">User Layout</Header></Card.Header>
+                            <Card.Content style={{ backgroundImage: `url(${userLayoutImage})` }} className="new-project-card-content">
                                 <Button.Group>
                                     <Button icon primary onClick={event => this.onClickLinkTab(event, "https://github.com/FedoraGameDev/user-layout")}>
                                         <Icon size="large" name="github" />
@@ -53,22 +53,31 @@ class Projects extends Component
                             </Card.Content>
                         </Card>
 
-                        <Card link onClick={() => this.onClickLink("/projects/dawn-of-fruition")} className="project-card">
-                            <Card.Content>
-                                <div style={{ maxHeight: "150px", overflow: "hidden" }}><Image className="mini-project-image" src={IreenaImage} /></div>
-                                <Card.Header>Dawn of Fruition</Card.Header>
+                        <Card link onClick={() => this.onClickLink("/projects/dawn-of-fruition")} className="new-project-card">
+                            <Card.Header><Header as="h2">Dawn of Fruition</Header></Card.Header>
+                            <Card.Content style={{ backgroundImage: `url(${IreenaImage})`, backgroundSize: "auto 100%" }} className="new-project-card-content">
                             </Card.Content>
                         </Card>
 
-                        <Card link onClick={() => this.onClickLink("/projects/deep")} className="project-card">
-                            <Card.Content>
-                                <div style={{ maxHeight: "200px", overflow: "hidden" }}><Image className="mini-project-image" src={ChestImage} /></div>
-                                <Card.Header>Deep</Card.Header>
+                        <Card link onClick={() => this.onClickLink("/projects/deep")} className="new-project-card">
+                            <Card.Header><Header as="h2">Deep</Header></Card.Header>
+                            <Card.Content style={{ backgroundImage: `url(${ChestImage})`, backgroundSize: "auto 100%" }} className="new-project-card-content">
+                            </Card.Content>
+                        </Card>
+
+                        <Card link onClick={() => this.onClickLink("/projects/fedora-dev")} className="new-project-card">
+                            <Card.Header><Header as="h2">Fedora Dev</Header></Card.Header>
+                            <Card.Content style={{ backgroundImage: `url(${fedoraLogo})` }} className="new-project-card-content">
+                                <Button.Group>
+                                    <Button icon primary onClick={event => this.onClickLinkTab(event, "https://www.youtube.com/channel/UCyE9r3wpil_9i7CpSaxmpGQ/videos")}>
+                                        <Image src={youtubeLogo} style={{ height: "2rem" }} />
+                                    </Button>
+                                </Button.Group>
                             </Card.Content>
                         </Card>
                     </Card.Group>
-                </Message>
-            </div>
+                </Message.Content>
+            </Message>
         )
     }
 }

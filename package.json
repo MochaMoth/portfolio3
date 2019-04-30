@@ -19,6 +19,8 @@
   "homepage": "https://github.com/FedoraGameDev/portfolio3#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.16.4"
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "nodemailer": "^6.1.1"
   }
 }

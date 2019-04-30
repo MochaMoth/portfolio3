@@ -13,14 +13,15 @@ class RoleplayWebsite extends Component
 
     render()
     {
-        const learnedSkills = ["Infinite Scroll", "Semantic UI", "No-SQL", "CRUD", "Modular Components"];
+        const learnedSkills = ["Infinite Scroll", "Semantic UI", "No-SQL", "CRUD", "Modular Components", "Website Deployment"];
+
         return (
             <Message color="black">
                 <Message.Header style={{ textAlign: "center" }}>
-                    <Header as="h1" color="blue">Roleplay Website</Header>
+                    <Header as="h1" color="blue">Simply Roleplay</Header>
                 </Message.Header>
                 <Message.Content className="scrolling">
-                    <Segment inverted style={{ textAlign: "center" }}>
+                    <Segment inverted style={{ textAlign: "center", paddingBottom: "0" }}>
                         <Button.Group>
                             <Button icon onClick={event => this.onClick("https://nodejs.org/en/")} primary><Icon name="node js" size="huge" /></Button>
                             <Button icon onClick={event => this.onClick("https://reactjs.org/")} primary><Icon name="react" size="huge" /></Button>
@@ -28,6 +29,12 @@ class RoleplayWebsite extends Component
                             <Button icon onClick={event => this.onClick("https://git-scm.com/")} primary><Icon name="git square" size="huge" /></Button>
                             <Button icon onClick={event => this.onClick("https://firebase.google.com/")} primary><Image style={{ filter: "invert(100%)" }} className="techstack-logo" src={firebaseImage} /></Button>
                             <Button icon onClick={event => this.onClick("https://expressjs.com/")} primary><Image src={expressImage} /></Button>
+                        </Button.Group>
+                    </Segment>
+                    <Segment inverted style={{ textAlign: "center", paddingTop: "0" }}>
+                        <Button.Group>
+                            <Button icon onClick={event => this.onClick("https://github.com/FedoraGameDev/roleplay")} primary><Icon name="github" size="huge" /></Button>
+                            <Button icon onClick={event => this.onClick("https://simply-roleplay.herokuapp.com")} primary><Icon name="at" size="huge" /></Button>
                         </Button.Group>
                     </Segment>
                     <Image src={simplyRoleplayImage} className="project-image" />
@@ -61,12 +68,6 @@ class RoleplayWebsite extends Component
                         </Message.Content>
                     </Message>
                 </Message.Content>
-                <Segment inverted style={{ textAlign: "center" }}>
-                    <Button.Group>
-                        <Button icon onClick={event => this.onClick("https://github.com/FedoraGameDev/roleplay")} primary><Icon name="github" size="huge" /></Button>
-                        <Button icon onClick={event => this.onClick("https://simply-roleplay.herokuapp.com")} primary><Icon name="at" size="huge" /></Button>
-                    </Button.Group>
-                </Segment>
             </Message>
         );
     }

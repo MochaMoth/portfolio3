@@ -40,12 +40,26 @@ class Projects extends Component
                                 <p style={{ color: "red" }}>Site may need to wake.</p>
                             </Card.Content>
                         </Card>
+
+                        <Card link onClick={() => this.onClickLink("/projects/user-layout")} className="project-card">
+                            <Image src={RoleplayWebsiteImage} className="mini-project-image" />
+                            <Card.Content>
+                                <Card.Header>User Layout</Card.Header>
+                                <Button.Group>
+                                    <Button icon primary onClick={event => this.onClickLinkTab(event, "https://github.com/FedoraGameDev/user-layout")}>
+                                        <Icon size="large" name="github" />
+                                    </Button>
+                                </Button.Group>
+                            </Card.Content>
+                        </Card>
+
                         <Card link onClick={() => this.onClickLink("/projects/dawn-of-fruition")} className="project-card">
                             <Card.Content>
                                 <div style={{ maxHeight: "150px", overflow: "hidden" }}><Image className="mini-project-image" src={IreenaImage} /></div>
                                 <Card.Header>Dawn of Fruition</Card.Header>
                             </Card.Content>
                         </Card>
+
                         <Card link onClick={() => this.onClickLink("/projects/deep")} className="project-card">
                             <Card.Content>
                                 <div style={{ maxHeight: "200px", overflow: "hidden" }}><Image className="mini-project-image" src={ChestImage} /></div>

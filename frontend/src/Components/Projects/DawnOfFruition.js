@@ -12,7 +12,8 @@ class RoleplayWebsite extends Component
 
     render()
     {
-        const learnedSkills = ["Unity", "C#"];
+        const learnedSkills = ["Unity", "C#", ""];
+
         return (
             <Message color="black">
                 <Message.Header style={{ textAlign: "center" }}>
@@ -30,7 +31,7 @@ class RoleplayWebsite extends Component
                     <Message>
                         <Message.Header><Header as="h3" style={{ textAlign: "center" }} color="blue">Idea</Header></Message.Header>
                         <Message.Content>
-                            Dawn of Fruition is a game made in Unity.
+                            Dawn of Fruition is a game made in Unity that features a custom built NPC scheduling system.
                         </Message.Content>
                     </Message>
                     <Message>

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ece1f429.chunk.css",
+    "main.js": "/static/js/main.8bab6ddd.chunk.js",
+    "main.js.map": "/static/js/main.8bab6ddd.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.9449ff86.chunk.js": "/static/js/2.9449ff86.chunk.js",
+    "static/js/2.9449ff86.chunk.js.map": "/static/js/2.9449ff86.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.84e7374c5a718450406a9f9d27a73da3.js": "/precache-manifest.84e7374c5a718450406a9f9d27a73da3.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.ece1f429.chunk.css.map": "/static/css/main.ece1f429.chunk.css.map",
+    "static/media/Chest.png": "/static/media/Chest.803c5801.png",
+    "static/media/Ireena.png": "/static/media/Ireena.f088fca3.png",
+    "static/media/UnityLogo.svg": "/static/media/UnityLogo.33e524fa.svg",
+    "static/media/firebase.svg": "/static/media/firebase.64f78189.svg",
+    "static/media/simplyRoleplay.png": "/static/media/simplyRoleplay.59296ba1.png"
+  }
+}

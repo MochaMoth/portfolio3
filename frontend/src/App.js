@@ -10,6 +10,7 @@ import DawnOfFruition from "./Components/Projects/DawnOfFruition";
 import UserLayout from "./Components/Projects/UserLayout";
 import Deep from "./Components/Projects/Deep";
 import FedoraDev from "./Components/Projects/FedoraDev";
+import Oxeo from "./Components/Projects/Oxeo";
 import "./App.scss";
 
 function App()
@@ -26,6 +27,7 @@ function App()
 					<Route path="/projects/dawn-of-fruition" exact component={DawnOfFruition} />
 					<Route path="/projects/deep" exact component={Deep} />
 					<Route path="/projects/fedora-dev" exact component={FedoraDev} />
+					<Route path="/projects/oxeo" exact component={Oxeo} />
 					<Rail position="left" attached className="desktop-navigation">
 						<Navigation />
 					</Rail>

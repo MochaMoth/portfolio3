@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Message, Header, Image, Icon, Button, Segment, Card } from "semantic-ui-react";
+import { Message, Header, Image, Button, Segment, Card } from "semantic-ui-react";
 import dawnOfFruition from "../Images/Ireena.png";
 import unityLogo from "../Images/UnityLogo.svg";
 import blenderLogo from "../Images/blender.png";

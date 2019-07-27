@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3ae36ecea5956848b12d8c83f5097268",
+    "revision": "6124743d479eb0a135da98e41b9316b1",
     "url": "/index.html"
   },
   {
-    "revision": "f753ba6eb6e3f1f5af5f",
-    "url": "/static/css/main.870cf418.chunk.css"
+    "revision": "35b29e35190d28b0691b",
+    "url": "/static/css/main.5b96f456.chunk.css"
   },
   {
-    "revision": "d871ef84ec2b6cf88101",
-    "url": "/static/js/2.bb26a9c2.chunk.js"
+    "revision": "00da3e9be88802d87614",
+    "url": "/static/js/2.fd74b8c3.chunk.js"
   },
   {
-    "revision": "f753ba6eb6e3f1f5af5f",
-    "url": "/static/js/main.fbbd444f.chunk.js"
+    "revision": "35b29e35190d28b0691b",
+    "url": "/static/js/main.525d7174.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
@@ -38,6 +38,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f088fca30382bccf8ad3bc4b706513f9",
     "url": "/static/media/Ireena.f088fca3.png"
+  },
+  {
+    "revision": "aeaa50d27dde85af9adcc707ea4d15a2",
+    "url": "/static/media/Survey_Detailed.aeaa50d2.png"
   },
   {
     "revision": "33e524fa4e2b7ec62389b3a4350378be",
